@@ -12,6 +12,9 @@
             padding: 0;
             background-color: #f9f9f9;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             background-color: #4CAF50;
@@ -29,7 +32,8 @@
         }
         .container {
             display: flex;
-            margin-top: 100px; /* Deixa um espaço para o header fixo */
+            margin-top: 100px; /* Espaço para o header fixo */
+            flex-grow: 1;
         }
         .sidebar {
             background-color: #333;
@@ -77,6 +81,8 @@
             margin-left: 270px;
             padding: 20px;
             flex-grow: 1;
+            overflow-y: auto;
+            max-height: calc(100vh - 100px); /* Ajusta a altura para permitir rolagem */
         }
         .product-list {
             display: flex;
@@ -132,12 +138,22 @@
             color: white;
             text-align: center;
             padding: 20px;
-            position: relative;
-            bottom: 0;
+            margin-top: auto;
             width: 100%;
-            margin-top: 50px;
         }
     </style>
+    <script>
+        function filterProducts(category) {
+            var products = document.querySelectorAll('.product');
+            products.forEach(function (product) {
+                if (product.classList.contains(category) || category === 'all') {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 
@@ -149,19 +165,20 @@
         <!-- Barra lateral com categorias -->
         <div class="sidebar">
             <ul>
-                <li><a href="#" class="section">Planilhas</a></li>
+                <li><a href="#" class="section" onclick="filterProducts('planilha')">Planilhas</a></li>
                 <ul>
-                    <li><a href="automacao.html">Automação</a></li>
-                    <li><a href="produtividade.html">Produtividade</a></li>
-                    <li><a href="auditoria.html">Auditoria</a></li>
-                    <li><a href="analise-de-dados.html">Análise de Dados</a></li>
+                    <li><a href="#" onclick="filterProducts('automacao')">Automação</a></li>
+                    <li><a href="#" onclick="filterProducts('produtividade')">Produtividade</a></li>
+                    <li><a href="#" onclick="filterProducts('auditoria')">Auditoria</a></li>
+                    <li><a href="#" onclick="filterProducts('analise')">Análise de Dados</a></li>
                 </ul>
-                <li><a href="#" class="section">E-books</a></li>
+                <li><a href="#" class="section" onclick="filterProducts('ebook')">E-books</a></li>
                 <ul>
-                    <li><a href="literatura.html">Literatura</a></li>
-                    <li><a href="negocios.html">Negócios</a></li>
-                    <li><a href="educacao.html">Educação</a></li>
+                    <li><a href="#" onclick="filterProducts('literatura')">Literatura</a></li>
+                    <li><a href="#" onclick="filterProducts('negocios')">Negócios</a></li>
+                    <li><a href="#" onclick="filterProducts('educacao')">Educação</a></li>
                 </ul>
+                <li><a href="#" onclick="filterProducts('all')">Todos os Produtos</a></li>
             </ul>
         </div>
 
@@ -169,21 +186,43 @@
         <div class="main-content">
             <h2>Produtos em Destaque</h2>
             <div class="product-list">
-                <div class="product">
+                <!-- Planilha: Automação -->
+                <div class="product automacao planilha">
                     <img src="https://via.placeholder.com/200" alt="Produto 1">
                     <h3>Planilha de Automação</h3>
                     <p>Automatize suas tarefas com eficiência.</p>
                     <p class="price">R$ 49,90</p>
                     <a href="#" class="btn-buy">Comprar</a>
                 </div>
-                <div class="product">
+
+                <!-- E-book: Negócios -->
+                <div class="product negocios ebook">
                     <img src="https://via.placeholder.com/200" alt="Produto 2">
                     <h3>E-book: Negócios de Sucesso</h3>
                     <p>Aprenda estratégias para o sucesso empresarial.</p>
                     <p class="price">R$ 29,90</p>
                     <a href="#" class="btn-buy">Comprar</a>
                 </div>
-                <!-- Adicione mais produtos aqui -->
+
+                <!-- Planilha: Produtividade -->
+                <div class="product produtividade planilha">
+                    <img src="https://via.placeholder.com/200" alt="Produto 3">
+                    <h3>Planilha de Produtividade</h3>
+                    <p>Aumente sua eficiência no trabalho.</p>
+                    <p class="price">R$ 39,90</p>
+                    <a href="#" class="btn-buy">Comprar</a>
+                </div>
+
+                <!-- E-book: Educação -->
+                <div class="product educacao ebook">
+                    <img src="https://via.placeholder.com/200" alt="Produto 4">
+                    <h3>E-book: Educação Transformadora</h3>
+                    <p>Inspire-se com novas abordagens educacionais.</p>
+                    <p class="price">R$ 24,90</p>
+                    <a href="#" class="btn-buy">Comprar</a>
+                </div>
+
+                <!-- Mais produtos aqui -->
             </div>
         </div>
     </div>
