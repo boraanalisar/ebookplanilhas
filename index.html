@@ -18,24 +18,20 @@
             color: white;
             text-align: center;
             padding: 20px;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
         }
         header h1 {
             margin: 0;
         }
         .container {
             display: flex;
-            margin-top: 100px; /* Espaço para o header fixo */
+            margin-top: 0px; /* Remove o espaço adicional acima do menu */
         }
         .sidebar {
             background-color: #333;
             width: 250px;
             height: 100vh; /* Define a altura total da viewport */
-            padding-top: ;
-            position: relative; /* Remove a posição fixa */
+            padding-top: 0; /* Remove o padding extra para aproximar do título */
+            position: relative;
             overflow-y: auto; /* Adiciona a barra de rolagem */
         }
         .sidebar ul {
@@ -66,7 +62,7 @@
             margin-left: 270px;
             padding: 20px;
             overflow-y: auto;
-            height: calc(100vh - 120px); /* Ajusta a altura para a barra de rolagem */
+            height: calc(100vh - 40px); /* Ajusta a altura para a barra de rolagem */
             margin-bottom: 40px; /* Adiciona margem para afastar do rodapé */
         }
         .product-list {
