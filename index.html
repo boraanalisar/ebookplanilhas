@@ -120,14 +120,44 @@
             background-color: #cc5200;
         }
         footer {
-            background-color: #333;
+            background-color: #444; /* Cor diferente do menu */
             color: white;
             text-align: center;
-            padding: 20px;
-            position: relative; /* Remove o rodapé fixo */
+            padding: 10px; /* Rodapé mais estreito */
+            position: relative;
             bottom: 0;
             left: 0;
             right: 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .main-content {
+                margin-left: 220px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding-top: 10px;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 10px;
+                height: auto;
+            }
+            .product {
+                width: 100%; /* Produtos ocupam 100% da largura em telas pequenas */
+            }
         }
     </style>
     <script>
