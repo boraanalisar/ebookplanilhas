@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de vendas do livro Luna, a Pequena Astronauta.">
+    <title>Luna, a Pequena Astronauta - Página de Vendas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #333;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .content img {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .details {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .details h2 {
+            font-size: 2em;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+        .details p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 2em;
+            color: #ff3300;
+            font-weight: bold;
+        }
+        .btn-buy {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-buy:hover {
+            background-color: #cc5200;
+        }
+        .faq {
+            margin-top: 40px;
+        }
+        .faq h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .faq p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Luna, a Pequena Astronauta</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <img src="capaLuna.png" alt="Capa do livro Luna, a Pequena Astronauta">
+            <div class="details">
+                <h2>Uma Aventura Espacial Inesquecível!</h2>
+                <p><strong>Autor:</strong> Histórias Fantásticas Kids</p>
+                <p><strong>Faixa Etária:</strong> 5 a 10 anos</p>
+                <p><strong>Formato:</strong> E-book (PDF)</p>
+                <p>Em um pequeno vilarejo, Luna sonhava em ser astronauta. Certo dia, ela encontrou uma nave espacial mágica e embarcou em uma emocionante aventura pelo cosmos. Acompanhada de Estelar, um robô simpático, Luna descobre o poder da imaginação e da amizade.</p>
+                <p class="price">R$ 19,90</p>
+                <a href="https://pay.hotmart.com/X90117379U" class="btn-buy">Compre Agora</a>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h3>Perguntas Frequentes</h3>
+            <p><strong>1. Qual é o público-alvo do livro?</strong><br>O livro é recomendado para crianças de 5 a 10 anos, mas qualquer pessoa pode se encantar com a história de Luna.</p>
+            <p><strong>2. Em que formato o livro está disponível?</strong><br>O livro está disponível em formato E-book (PDF), pronto para leitura digital em qualquer dispositivo.</p>
+            <p><strong>3. Como posso receber o livro?</strong><br>Após a compra, o e-book será enviado diretamente para o e-mail cadastrado.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Histórias Fantásticas Kids | Todos os direitos reservados</p>
+        <p>Siga-nos nas redes sociais: YouTube: @HistoriasFantasticasKids | Instagram: @historiasfantasticasoficial</p>
+    </footer>
+
+</body>
+</html>
